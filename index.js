@@ -19,7 +19,7 @@ function fileread(){
   await page.keyboard.press("Enter");
   await page.waitForNavigation();
 
-  await page.goto("https://campus.softwarica.edu.np/news-and-announcements");
+  await page.goto("https://campus.softwarica.edu.np/news-and-announcements", {waitUntil: "networkidle2"});
 
   for (var button = 1; button < 10; button++){
     await page.click(`#main-wrapper > section.pt-0 > div > div.row.justify-content-center > div:nth-child(${button}) > div > div > div.card-footer > div > div:nth-child(2) > button > span`);
@@ -41,8 +41,6 @@ function fileread(){
     console.log(list_text[count_i]);
     console.log("-------------------------");
   }
-
-  await page.screenshot({"path": "test.png", "fullPage": true})
 
   await browser.close();
 })();
