@@ -8,7 +8,7 @@ function fileread(){
 };
 
 (async () => {
-  const browser = await puppeteer.launch({headless: false});
+  const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
 
   await page.goto("https://campus.softwarica.edu.np/sign-in");
@@ -39,7 +39,7 @@ function fileread(){
     console.log(list_time[count_i]);
     console.log(list_poster[count_i]);
     console.log(list_text[count_i]);
-    console.log("------------------");
+    console.log("-------------------------");
   }
 
   await page.screenshot({"path": "test.png", "fullPage": true})
