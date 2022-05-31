@@ -8,10 +8,10 @@ function fileread(){
 };
 
 (async () => {
-  const browser = await puppeteer.launch({headless: true});
+ const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
 
-  await page.goto("https://campus.softwarica.edu.np/sign-in");
+  await page.goto("https://schoolworkspro.com/sign-in");
   
   await page.type("#main-wrapper > section > div > div > div > div > div > div > div.col-lg-6.my-auto > div > form > div:nth-child(1) > input", fileread()[0]);
   await page.type("#main-wrapper > section > div > div > div > div > div > div > div.col-lg-6.my-auto > div > form > div:nth-child(2) > input", fileread()[1]);
@@ -19,7 +19,7 @@ function fileread(){
   await page.keyboard.press("Enter");
   await page.waitForNavigation();
 
-  await page.goto("https://campus.softwarica.edu.np/news-and-announcements", {waitUntil: "networkidle2"});
+  await page.goto("https://schoolworkspro.com/news-and-announcements", {waitUntil: "networkidle2"});
 
   for (var button = 1; button < 10; button++){
     await page.click(`#main-wrapper > section.pt-0 > div > div.row.justify-content-center > div:nth-child(${button}) > div > div > div.card-footer > div > div:nth-child(2) > button > span`);

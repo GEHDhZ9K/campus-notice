@@ -28,7 +28,7 @@ npm install puppeteer
 
 - Run the script
 ```
-node main.js
+node index.js
 ```
 
 - Output
