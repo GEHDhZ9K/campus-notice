@@ -14,7 +14,8 @@ git clone https://github.com/GEHDhZ9K/campus-notice
 ```
 - Install dependencies
 ```
-npm install puppeteer
+cd ./campus-notice
+npm install
 ```
 - Create a seperated config.json file in the git clone directory
 
